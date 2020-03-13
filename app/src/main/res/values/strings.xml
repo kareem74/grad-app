@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="normal_ph_range">Normal PH Range</string>
+    <string name="Decision_parameters">Decision Parameters</string>
+    <string name="General_setting"> General Setting</string>
+    <string name="Normal_Temperature">Normal Temperature</string>
+    <string name="notify_on_extreme_values">Notify On Extreme Values</string>
+</resources>
