@@ -38,7 +38,7 @@
                 android:layout_below="@id/live_icon"
                 android:layout_centerInParent="true"
                 android:background="#171717"
-                android:text="Liveee View"
+                android:text="Live View"
                 android:textColor="#ff6123"
                 ></TextView>
         </RelativeLayout>
