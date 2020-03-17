@@ -36,7 +36,7 @@
                 android:layout_below="@id/live_icon"
                 android:layout_centerInParent="true"
                 android:background="#171717"
-                android:text="Live View"
+                android:text="Live hhh View"
                 android:textColor="#ff6123"
                 ></TextView>
         </RelativeLayout>
