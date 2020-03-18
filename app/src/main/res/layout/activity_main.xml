@@ -141,9 +141,11 @@
         </RelativeLayout>
     </GridLayout>
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="@color/light_color"
         android:text="@string/CopyRight"
+        android:layout_gravity="center"
+        android:textAppearance="?attr/buttonStyleSmall"
         android:gravity="center"></TextView>
 </LinearLayout>
