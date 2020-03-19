@@ -11,4 +11,10 @@
     <string name="LiveMonitor">Live Monitor</string>
     <string name="LogOut">Log Out</string>
     <string name="pro">Smart Fish Farm</string>
+    <string name="LogIn">Log In</string>
+    <string name="Register">Register</string>
+    <string name="password">Password</string>
+    <string name="ConfirmPassword">Confirm Password</string>
+    <string name="email">E-mail</string>
+    <string name="Username">Username</string>
 </resources>
