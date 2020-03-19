@@ -71,6 +71,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/Register_btn"
         android:onClick="RegisterInput"
         android:background="@color/background_color"
         android:textColor="@color/light_color"

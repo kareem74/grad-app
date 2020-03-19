@@ -2,8 +2,10 @@ package com.example.project;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -12,6 +14,7 @@ public class Register extends AppCompatActivity {
     private TextInputLayout textInputEmail;
     private TextInputLayout textInputUsername;
     private TextInputLayout textInputPassword;
+    Button Register_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +22,14 @@ public class Register extends AppCompatActivity {
         textInputEmail = findViewById(R.id.text_input_email);
         textInputUsername = findViewById(R.id.text_input_username);
         textInputPassword = findViewById(R.id.text_input_password);
+        Register_btn = findViewById(R.id.Register_btn);
+        Register_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Register.this,MainActivity.class);
+            }
+        });
+
     }
 
     private boolean validateEmail() {
