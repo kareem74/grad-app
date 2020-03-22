@@ -27,6 +27,7 @@
             android:text="notify on PH extreme values"
             android:textColor="@color/dark_color"
             android:textSize="16dp"
+            android:buttonTint="@color/light_color"
             ></androidx.appcompat.widget.AppCompatCheckBox>
         <TextView
             android:layout_below="@id/notify_checkbox"
@@ -198,6 +199,7 @@ android:layout_marginLeft="32dp"
        android:textSize="16dp"
        android:textColor="@color/dark_color"
        ></TextView>
+
     </RelativeLayout>
 </ScrollView>
 
