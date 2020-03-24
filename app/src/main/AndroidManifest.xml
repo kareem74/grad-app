@@ -9,17 +9,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
-        <activity android:name=".Register">
+        <activity android:name=".Register">  </activity>
+        <activity android:name=".login" />
+        <activity android:name=".history_page" />
+        <activity android:name=".setting_page" />
+        <activity android:name=".Live_view_page">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login" />
-        <activity android:name=".history_page" />
-        <activity android:name=".setting_page" />
-        <activity android:name=".Live_view_page" />
         <activity android:name=".MainActivity">
 
         </activity>
