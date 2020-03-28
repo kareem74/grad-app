@@ -14,7 +14,7 @@ public class Register extends AppCompatActivity {
     private TextInputLayout textInputEmail;
     private TextInputLayout textInputUsername;
     private TextInputLayout textInputPassword;
-    Button Register_btn;
+    Button Register_btn ,login1_btn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +23,18 @@ public class Register extends AppCompatActivity {
         textInputUsername = findViewById(R.id.text_input_username);
         textInputPassword = findViewById(R.id.text_input_password);
         Register_btn = findViewById(R.id.Register_btn);
+
+        login1_btn=findViewById(R.id.login1_btn);
+        login1_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Register.this,login.class);
+                startActivity(intent);
+            }
+        });
+
+
+
         Register_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

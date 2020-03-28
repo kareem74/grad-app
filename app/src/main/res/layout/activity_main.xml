@@ -2,19 +2,19 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="32dp"
-    android:background="@color/background_color"
+    android:background="@drawable/back"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:layout_weight="1">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
 
-    <ImageView
-        android:layout_width="351dp"
-        android:layout_height="match_parent"
-        android:contentDescription="@string/pro"
-        android:src="@drawable/icons"></ImageView>
-</RelativeLayout>
+        <ImageView
+            android:layout_width="351dp"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/pro"
+            android:src="@drawable/icons"></ImageView>
+    </RelativeLayout>
 
     <GridLayout
         android:layout_width="309dp"
@@ -50,7 +50,7 @@
                 android:layout_centerInParent="true"
                 android:text="@string/LiveMonitor"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
-                android:textColor="#ff6123"></TextView>
+                android:textColor="#46B5D1"></TextView>
         </RelativeLayout>
 
         <RelativeLayout
@@ -78,7 +78,7 @@
                 android:layout_centerInParent="true"
                 android:text="@string/History"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
-                android:textColor="#ff6123"></TextView>
+                android:textColor="#46B5D1"></TextView>
         </RelativeLayout>
 
         <RelativeLayout
@@ -137,13 +137,13 @@
                 android:gravity="center"
                 android:text="@string/LogOut"
                 android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
-                android:textColor="#ff6123"></TextView>
+                android:textColor="#46B5D1"></TextView>
         </RelativeLayout>
     </GridLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/light_color"
+        android:textColor="#46B5D1"
         android:text="@string/CopyRight"
         android:layout_gravity="center"
         android:textAppearance="?attr/buttonStyleSmall"
