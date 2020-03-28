@@ -5,14 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="32dp"
     tools:context=".MainActivity"
     android:background="@drawable/back"
     >
 
-
     <TableLayout
         android:padding="16dp"
-
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginVertical="30dp"
@@ -27,13 +26,13 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:textColor="#204051"
+                android:textColor="#687466"
                 />
             <EditText android:layout_width="match_parent"
                 android:id="@+id/phe"
                 android:layout_height="40dp"
                 android:layout_weight="1"
-                android:background="#FFFFFF"
+                android:background="@drawable/round_eidt_txt_live_page"
                 android:drawableLeft="@drawable/ic_flask"
                 />
         </TableRow>
@@ -46,16 +45,16 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:textColor="#204051"
+                android:textColor="#687466"
                 />
-            <EditText android:layout_width="match_parent"
-                android:id="@+id/tempe"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
 
-                android:drawableLeft="@drawable/ic_dna"
-                />
+            <EditText
+                android:id="@+id/tempe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_eidt_txt_live_page"
+                android:drawableLeft="@drawable/ic_dna" />
 
 
 
@@ -69,26 +68,19 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:textColor="#204051"
+                android:textColor="#687466"
                 />
-            <EditText android:layout_width="match_parent"
-                android:id="@+id/ammoniae"
-                android:layout_height="40dp"
-                android:layout_weight="1"
-                android:background="#FFFFFF"
 
+            <EditText
+                android:id="@+id/ammoniae"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/round_eidt_txt_live_page"
                 android:drawableLeft="@drawable/ic_test_tube"
 
                 />
-
-
-
         </TableRow>
-
-
-
-
     </TableLayout>
-
 
 </LinearLayout>
