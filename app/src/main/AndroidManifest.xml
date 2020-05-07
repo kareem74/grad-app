@@ -10,23 +10,22 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
-        tools:replace="icon,theme"
-        >
-        <activity android:name=".Register">  <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        tools:replace="icon,theme">
+        <activity android:name=".Wind_API"></activity>
+        <activity android:name=".Register">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>  </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
         <activity android:name=".login" />
         <activity android:name=".history_page" />
         <activity android:name=".setting_page" />
-        <activity android:name=".Live_view_page">
-
-
-        </activity>
-        <activity android:name=".MainActivity">
-
-        </activity>
+        <activity android:name=".Live_view_page"></activity>
+        <activity android:name=".MainActivity"></activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

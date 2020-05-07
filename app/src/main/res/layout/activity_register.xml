@@ -96,5 +96,13 @@
     android:layout_gravity="center"
     android:textColor="#46B5D1"
     ></Button>
-
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#687466"
+        android:text="@string/CopyRight"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+        android:gravity="center"></TextView>
 </LinearLayout>
