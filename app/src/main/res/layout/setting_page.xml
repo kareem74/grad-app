@@ -8,7 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
+android:paddingTop="32dp"
+        android:paddingLeft="16dp"
         android:background="@drawable/back"
         >
         <TextView
@@ -199,7 +200,6 @@ android:layout_marginLeft="32dp"
        android:textSize="16dp"
        android:textColor="#687466"
        ></TextView>
-
     </RelativeLayout>
 </ScrollView>
 
