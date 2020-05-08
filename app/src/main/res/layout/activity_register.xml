@@ -9,57 +9,56 @@
     android:background="@drawable/back"
     tools:context=".Register">
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_email"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="126dp"
-       android:background="@drawable/round_eidttxt"
+        android:background="@drawable/round_eidttxt"
         app:errorEnabled="true">
-          <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/edit_text_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint=" E-mail"
-              android:drawableLeft="@drawable/email"
+            android:drawableLeft="@drawable/email"
             android:inputType="textEmailAddress" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-         <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_username"
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="72dp"
-             android:layout_marginTop="16dp"
-             android:background="@drawable/round_eidttxt"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/round_eidttxt"
         app:counterEnabled="true"
         app:counterMaxLength="15"
         app:errorEnabled="true">
-            <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/edit_text_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint=" Username"
-                android:drawableLeft="@drawable/username"
+            android:drawableLeft="@drawable/username"
             android:inputType="text" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-   <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_password"
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-       android:layout_marginTop="16dp"
+        android:layout_marginTop="16dp"
         app:errorEnabled="true"
-       android:background="@drawable/round_eidttxt"
+        android:background="@drawable/round_eidttxt"
         app:passwordToggleEnabled="true">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/edit_text_password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/lock"
             android:hint="@string/password"
             android:inputType="textPassword" />
 
-    </com.google.android.material.textfield.TextInputLayout>
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/Confirm_password_txt"
+    </LinearLayout>
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:errorEnabled="true"
@@ -67,14 +66,15 @@
         android:layout_marginTop="16dp"
         app:passwordToggleEnabled="true">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/edit_text_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Confirm Password"
-            android:drawableStart="@drawable/lock"
+            android:hint="@string/phone"
+            android:drawableStart="@drawable/ic_phone_android_black_24dp"
             android:inputType="textPassword" />
 
-    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
 
     <Button
         android:layout_width="wrap_content"
@@ -85,24 +85,33 @@
         android:layout_marginTop="64dp"
         android:background="@drawable/round_btn"
         android:textColor="#46B5D1"
-        android:text="@string/Register" />
-<Button
-    android:layout_marginTop="8dp"
-    android:id="@+id/login1_btn"
-    android:text="already have account?SignIn"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/round_btn"
-    android:layout_gravity="center"
-    android:textColor="#46B5D1"
-    ></Button>
+        android:text="@string/Register"
+        tools:ignore="OnClick" />
+    <Button
+        android:layout_marginTop="8dp"
+        android:id="@+id/login1_btn"
+        android:text="already have account?SignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_btn"
+        android:layout_gravity="center"
+        android:textColor="#46B5D1"
+        ></Button>
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textColor="#687466"
         android:text="@string/CopyRight"
         android:layout_gravity="center"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="56dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
         android:gravity="center"></TextView>
+
 </LinearLayout>

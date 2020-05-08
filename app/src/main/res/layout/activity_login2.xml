@@ -9,37 +9,45 @@
     android:orientation="vertical"
     android:background="@drawable/back"
     >
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_email"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="126dp"
+        android:layout_marginTop="220dp"
         android:background="@drawable/round_eidttxt"
         app:errorEnabled="true">
-    <com.google.android.material.textfield.TextInputEditText
+    <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/text_input_email"
         android:hint=" E-mail"
         android:drawableLeft="@drawable/email"
         android:inputType="textEmailAddress" />
-    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/text_input_password"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         app:errorEnabled="true"
         android:background="@drawable/round_eidttxt"
         app:passwordToggleEnabled="true">
 
-        <com.google.android.material.textfield.TextInputEditText
+        <EditText
+            android:id="@+id/password_edit_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/lock"
             android:hint="@string/password"
             android:inputType="textPassword" />
-    </com.google.android.material.textfield.TextInputLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+      android:layout_gravity="center"
+        android:layout_marginTop="32dp"
+        android:visibility="gone" />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -55,7 +63,7 @@
         android:textColor="#687466"
         android:text="@string/CopyRight"
         android:layout_gravity="center"
-        android:layout_marginTop="250dp"
+        android:layout_marginTop="180dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
         android:gravity="center"></TextView>
 

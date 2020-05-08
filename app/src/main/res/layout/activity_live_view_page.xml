@@ -49,7 +49,7 @@
             <EditText
                 android:id="@+id/tempe"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_weight="1"
                 android:background="@drawable/round_edit_txt_live_page"
                 android:drawableLeft="@drawable/ic_dna" />
@@ -72,7 +72,7 @@
             <EditText
                 android:id="@+id/ammoniae"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_weight="1"
                 android:background="@drawable/round_edit_txt_live_page"
                 android:drawableLeft="@drawable/ic_test_tube"

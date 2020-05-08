@@ -33,15 +33,15 @@ public class Wind_API extends AppCompatActivity {
         Wind_btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String Str_txt = city_et.getText().toString();
-                connectToAPI(Str_txt);
+                connectToAPI();
               Wind_tv.setVisibility(View.VISIBLE);
             }
         });
 
     }
-    private  void  connectToAPI(String CityName)
+    private  void  connectToAPI()
     {
-        String API_Link = "https://samples.openweathermap.org/data/2.5/weather?q="+CityName+"&appid=439d4b804bc8187953eb36d2a8c26a02";
+        String API_Link = "https://samples.openweathermap.org/data/2.5/weather?q=&appid=439d4b804bc8187953eb36d2a8c26a02";
 
         RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, API_Link,
