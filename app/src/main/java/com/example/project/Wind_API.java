@@ -23,6 +23,7 @@ public class Wind_API extends AppCompatActivity {
     Button Wind_btn ;
     TextView Wind_tv;
     EditText city_et;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +33,6 @@ public class Wind_API extends AppCompatActivity {
         city_et = findViewById(R.id.city_et);
         Wind_btn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                String Str_txt = city_et.getText().toString();
                 connectToAPI();
               Wind_tv.setVisibility(View.VISIBLE);
             }
