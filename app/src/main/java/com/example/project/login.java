@@ -1,11 +1,16 @@
 package com.example.project;
+import android.os.Bundle;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -13,25 +18,33 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
+
 public class login extends AppCompatActivity implements View.OnClickListener {
-    FirebaseAuth mAuth;
+    TextView regiser_txtview;
     EditText editTextEmail, editTextPassword;
+    Button login_button;
     ProgressBar progressBar;
+    FirebaseAuth mAuth;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login2);
 
         mAuth = FirebaseAuth.getInstance();
-        editTextEmail = (EditText) findViewById(R.id.text_input_email);
-        editTextPassword = (EditText) findViewById(R.id.edit_text_password);
-        progressBar = (ProgressBar) findViewById(R.id.progressbar);
-        findViewById(R.id.login_btn).setOnClickListener(this);
 
+        editTextEmail=findViewById(R.id.text_input_email);
+        editTextPassword=findViewById(R.id.password_edit_text);
+        regiser_txtview=findViewById(R.id.register_textview);
+        login_button=findViewById(R.id.login_btn);
+        progressBar =  findViewById(R.id.progressbar);
+
+        login_button.setOnClickListener(this);
+        regiser_txtview.setOnClickListener(this);
     }
-    private void userLogin() {
+
+    private void UserLogin(){
+
         String email = editTextEmail.getText().toString().trim();
         String password = editTextPassword.getText().toString().trim();
 
@@ -46,7 +59,6 @@ public class login extends AppCompatActivity implements View.OnClickListener {
             editTextEmail.requestFocus();
             return;
         }
-
         if (password.isEmpty()) {
             editTextPassword.setError("Password is required");
             editTextPassword.requestFocus();
@@ -58,38 +70,39 @@ public class login extends AppCompatActivity implements View.OnClickListener {
             editTextPassword.requestFocus();
             return;
         }
+
         progressBar.setVisibility(View.VISIBLE);
-        mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+
+        mAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 progressBar.setVisibility(View.GONE);
-                if (task.isSuccessful()) {
+                if(task.isSuccessful()){
                     finish();
                     Intent intent = new Intent(login.this,MainActivity.class);
                     intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     startActivity(intent);
-                } else {
+                }
+                else{
                     Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
-
         });
-
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        if (mAuth.getCurrentUser() != null) {
-            finish();
-            startActivity(new Intent(this, MainActivity.class));
-        }
-    }
 
     @Override
     public void onClick(View v) {
-
+        switch (v.getId()){
+            case R.id.register_textview:
+                startActivity(new Intent(this,Register.class));
+                break;
+            case R.id.login_btn:
+                UserLogin();
+                break;
+        }
     }
 }
+
 
 
