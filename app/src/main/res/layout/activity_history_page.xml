@@ -3,4 +3,9 @@
     android:orientation="vertical"
     android:background="@drawable/background_g"
     xmlns:android="http://schemas.android.com/apk/res/android" >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/oranda"
+        android:layout_gravity="center"></ImageView>
 </LinearLayout>
