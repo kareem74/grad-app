@@ -8,6 +8,12 @@
     tools:context=".MainActivity"
     android:background="@drawable/background_g"
     >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:src="@drawable/oranda"
+        android:layout_marginBottom="48dp"></ImageView>
     <TableLayout
         android:padding="16dp"
         android:layout_width="match_parent"
@@ -15,35 +21,34 @@
         android:layout_marginVertical="30dp"
         android:layout_marginHorizontal="10dp"
         >
-        <TableRow android:paddingBottom="16dp">
+        <TableRow android:paddingBottom="16dp"
+          android:paddingTop="32dp"            >
             <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/pht"
-                android:text="PH"
-                android:layout_weight="1"
+                android:text="@string/ph"
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:textColor="#687466"
+                android:textColor="@color/gray_light"
                 />
             <EditText android:layout_width="match_parent"
                 android:id="@+id/phe"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:background="@drawable/round_edit_txt_live_page"
                 android:drawableLeft="@drawable/ic_flask"
                 />
         </TableRow>
-        <TableRow android:paddingBottom="16dp">
+        <TableRow android:paddingBottom="16dp" android:paddingTop="32dp">
             <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/tempt"
-                android:text="temp"
-                android:layout_weight="1"
+                android:text="@string/temp"
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:textColor="#687466"
+                android:textColor="@color/gray_light"
                 />
 
             <EditText
@@ -57,16 +62,15 @@
 
 
         </TableRow>
-        <TableRow android:paddingBottom="16dp">
+        <TableRow android:paddingBottom="16dp" android:paddingTop="32dp">
             <TextView android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:id="@+id/ammoniat"
-                android:text="NH3"
-                android:layout_weight="1"
+                android:text="@string/nh3"
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="20dp"
-                android:textColor="#687466"
+                android:textColor="@color/gray_light"
                 />
 
             <EditText
@@ -86,7 +90,7 @@
         android:textColor="#687466"
         android:text="@string/CopyRight"
         android:layout_gravity="center"
-        android:layout_marginTop="420dp"
+        android:layout_marginTop="80dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
         android:gravity="center"></TextView>
 </LinearLayout>
