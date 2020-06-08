@@ -81,12 +81,12 @@
             android:id="@+id/edit_text_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColorHint="@color/gray_light"
-            android:textColor="@color/gray"
-            android:hint="@string/phone"
             android:drawableStart="@drawable/ic_phone_android_black_24dp"
-            android:inputType="textPassword"
-            android:maxLength="11"/>
+            android:hint="@string/phone"
+            android:inputType="number|phone"
+            android:maxLength="11"
+            android:textColor="@color/gray"
+            android:textColorHint="@color/gray_light" />
 
     </LinearLayout>
 
