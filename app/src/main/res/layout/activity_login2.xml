@@ -25,7 +25,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/text_input_email"
         android:hint=" E-mail"
-
+         android:textColorHint="@color/gray_light"
+        android:textColor="@color/gray"
         android:drawableLeft="@drawable/email"
         android:inputType="textEmailAddress" />
     </LinearLayout>
@@ -44,6 +45,8 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/lock"
             android:hint="@string/password"
+            android:textColorHint="@color/gray_light"
+            android:textColor="@color/gray"
             android:inputType="textPassword" />
     </LinearLayout>
 
