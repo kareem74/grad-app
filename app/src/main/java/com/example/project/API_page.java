@@ -41,7 +41,7 @@ public class API_page extends AppCompatActivity {
     }
     private  void  connectToAPI(String cityname)
     {
-        String API_Link = "https://openweathermap.org/data/2.5/weather?q="+cityname+"&appid=439d4b804bc8187953eb36d2a8c26a02";
+        String API_Link = "http://openweathermap.org/data/2.5/weather?q="+cityname+"&appid=439d4b804bc8187953eb36d2a8c26a02";
 
         RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, API_Link,
