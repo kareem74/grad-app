@@ -1,46 +1,39 @@
 <LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="32dp"
-    android:background="@drawable/back"
+    android:padding="16dp"
+    android:background="@drawable/background_g"
     xmlns:android="http://schemas.android.com/apk/res/android">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="0dp"
+        android:layout_weight="0"
+        android:src="@drawable/oranda"></ImageView>
 
     <GridLayout
-        android:layout_width="309dp"
-        android:layout_height="0dp"
+        android:layout_width="363dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
         android:layout_gravity="center"
-        android:layout_weight="6"
         android:columnCount="2"
+        android:layout_marginTop="80dp"
         android:rowCount="2">
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+
+        <ImageButton
+            android:id="@+id/live_icon"
+            android:layout_width="166dp"
+            android:layout_height="213dp"
             android:layout_row="0"
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_marginTop="96dp"
-            >
-
-            <ImageButton
-                android:id="@+id/live_icon"
-                android:layout_width="144dp"
-                android:layout_height="144dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/back"
-                android:src="@drawable/live132"></ImageButton>
-
-            <TextView
-                android:id="@+id/live_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/live_icon"
-                android:layout_centerInParent="true"
-                android:text="@string/LiveMonitor"
-                android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
-                android:textColor="#687466"></TextView>
-        </RelativeLayout>
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/labani"
+            android:src="@drawable/livemonitor"></ImageButton>
 
         <RelativeLayout
             android:layout_width="wrap_content"
@@ -49,54 +42,35 @@
             android:layout_rowWeight="1"
             android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_marginTop="96dp">
+           >
 
             <ImageButton
                 android:id="@+id/history_icon"
-                android:layout_width="144dp"
-                android:layout_height="144dp"
+                android:layout_width="141dp"
+                android:layout_height="198dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/back"
+                android:background="@color/labani"
                 android:src="@drawable/history"></ImageButton>
 
-            <TextView
-                android:id="@+id/history_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/history_icon"
-                android:layout_centerInParent="true"
-                android:text="@string/History"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
-                android:textColor="#687466"></TextView>
         </RelativeLayout>
 
         <RelativeLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="121dp"
             android:layout_row="1"
             android:layout_rowWeight="1"
             android:layout_column="0"
             android:layout_columnWeight="1"
-            android:layout_marginBottom="96dp">
+           >
 
             <ImageButton
                 android:id="@+id/setting_icon"
-                android:layout_width="144dp"
-                android:layout_height="144dp"
+                android:layout_width="136dp"
+                android:layout_height="match_parent"
                 android:layout_centerInParent="true"
-                android:background="@drawable/back"
-                android:src="@drawable/settings"></ImageButton>
+                android:background="@color/labani"
+                android:src="@drawable/setting"></ImageButton>
 
-            <TextView
-                android:id="@+id/setting_txt"
-                android:layout_width="96dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/setting_icon"
-                android:layout_centerInParent="true"
-                android:gravity="center"
-                android:text="@string/Setting"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
-                android:textColor="#687466"></TextView>
         </RelativeLayout>
 
         <RelativeLayout
@@ -106,32 +80,23 @@
             android:layout_rowWeight="1"
             android:layout_column="1"
             android:layout_columnWeight="1"
-            android:layout_marginBottom="96dp">
+           >
 
             <ImageButton
                 android:id="@+id/logout_icon"
-                android:layout_width="144dp"
-                android:layout_height="144dp"
+                android:layout_width="134dp"
+                android:layout_height="162dp"
                 android:layout_centerInParent="true"
-                android:background="@drawable/back"
-                android:src="@drawable/logout"></ImageButton>
+                android:background="@color/labani"
+                android:src="@drawable/LogOut"></ImageButton>
 
-            <TextView
-                android:id="@+id/logout_txt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/logout_icon"
-                android:layout_centerInParent="true"
-                android:gravity="center"
-                android:text="@string/LogOut"
-                android:textAppearance="@style/TextAppearance.AppCompat.Medium.Inverse"
-                android:textColor="#687466"></TextView>
+
         </RelativeLayout>
     </GridLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#687466"
+        android:textColor="@color/white"
         android:text="@string/CopyRight"
         android:layout_gravity="center"
         android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"

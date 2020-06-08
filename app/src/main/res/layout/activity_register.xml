@@ -6,13 +6,18 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp"
-    android:background="@drawable/back"
+    android:background="@drawable/background_g"
     tools:context=".Register">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/oranda"
+        android:layout_gravity="center"></ImageView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="126dp"
+        android:layout_marginTop="72dp"
         android:background="@drawable/round_eidttxt"
         app:errorEnabled="true">
         <EditText
@@ -20,6 +25,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint=" E-mail"
+            android:textColorHint="@color/gray_light"
+            android:textColor="@color/gray"
             android:drawableLeft="@drawable/email"
             android:inputType="textEmailAddress" />
 
@@ -36,6 +43,8 @@
             android:id="@+id/edit_text_name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/gray_light"
+            android:textColor="@color/gray"
             android:hint=" Username"
             android:drawableLeft="@drawable/username"
             android:inputType="text" />
@@ -55,6 +64,8 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/lock"
             android:hint="@string/password"
+            android:textColorHint="@color/gray_light"
+            android:textColor="@color/gray"
             android:inputType="textPassword" />
 
     </LinearLayout>
@@ -70,6 +81,8 @@
             android:id="@+id/edit_text_phone"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColorHint="@color/gray_light"
+            android:textColor="@color/gray"
             android:hint="@string/phone"
             android:drawableStart="@drawable/ic_phone_android_black_24dp"
             android:inputType="textPassword"
@@ -83,9 +96,9 @@
         android:id="@+id/Register_btn"
         android:onClick="RegisterInput"
         android:layout_gravity="center"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="24dp"
         android:background="@drawable/round_btn"
-        android:textColor="@color/blue_color"
+        android:textColor="@color/batihki"
         android:text="@string/Register"
         tools:ignore="OnClick" />
     <TextView
@@ -97,7 +110,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/blue_color"
+        android:textColor="@color/batihki"
         android:textSize="20dp"
         ></TextView>
     <ProgressBar
@@ -107,14 +120,5 @@
         android:layout_gravity="center"
         android:layout_centerVertical="true" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="#687466"
-        android:text="@string/CopyRight"
-        android:layout_gravity="center"
-        android:layout_marginTop="152dp"
-        android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
-        android:gravity="center"></TextView>
 
 </LinearLayout>

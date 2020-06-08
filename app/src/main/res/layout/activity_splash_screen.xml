@@ -8,5 +8,6 @@
         android:layout_width="match_parent"
         android:layout_height="502dp"
         android:layout_gravity="center"
+        android:scaleType="fitCenter"
         android:src="@drawable/oranda"></ImageView>
 </LinearLayout>

@@ -7,12 +7,17 @@
     android:padding="16dp"
     tools:context=".login"
     android:orientation="vertical"
-    android:background="@drawable/back"
+    android:background="@drawable/background_g"
     >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/oranda"
+        android:layout_gravity="center"></ImageView>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="220dp"
+        android:layout_marginTop="132dp"
         android:background="@drawable/round_eidttxt"
         app:errorEnabled="true">
     <EditText
@@ -20,6 +25,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/text_input_email"
         android:hint=" E-mail"
+
         android:drawableLeft="@drawable/email"
         android:inputType="textEmailAddress" />
     </LinearLayout>
@@ -49,7 +55,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
         android:background="@drawable/round_btn"
-        android:textColor="#46B5D1"
+        android:textColor="@color/batihki"
         android:text="Login" />
     <TextView
         android:id="@+id/register_textview"
@@ -60,7 +66,7 @@
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
         android:layout_gravity="center_horizontal"
-       android:textColor="@color/blue_color"
+       android:textColor="@color/batihki"
         android:textSize="20dp"></TextView>
     <ProgressBar
         android:id="@+id/progressbar"
@@ -76,7 +82,7 @@
         android:textColor="#687466"
         android:text="@string/CopyRight"
         android:layout_gravity="center"
-        android:layout_marginTop="152dp"
+        android:layout_marginTop="100dp"
         android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
         android:gravity="center"></TextView>
 
