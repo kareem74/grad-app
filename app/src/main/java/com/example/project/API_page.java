@@ -1,14 +1,10 @@
 package com.example.project;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -19,6 +15,8 @@ import com.android.volley.toolbox.Volley;
 
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class API_page extends AppCompatActivity {
     Button Wind_btn ;
@@ -52,7 +50,8 @@ public class API_page extends AppCompatActivity {
                     public void onResponse(String response) {
                         try {
                             JSONObject root = new JSONObject(response);
-                            JSONObject wind = root.getJSONObject("wind");
+                            JSONObject wind;
+                            wind = root.getJSONObject("wind");
                             Double speed = wind.getDouble("speed");
                             Double degree = wind.getDouble("deg");
                             // String name;
