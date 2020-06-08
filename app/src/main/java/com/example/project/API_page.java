@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -27,7 +28,7 @@ public class API_page extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_a_p_i_page);
+        setContentView(R.layout.activity_main);
         Wind_btn = findViewById(R.id.wind_btn);
         Wind_tv =findViewById(R.id.wind_view_tv);
         city_et = findViewById(R.id.city_et);
@@ -35,14 +36,14 @@ public class API_page extends AppCompatActivity {
             public void onClick(View v) {
                 String strtxt =city_et.getText().toString();
                 connectToAPI(strtxt);
-              //  Wind_tv.setVisibility(View.VISIBLE);
+                Wind_tv.setVisibility(View.VISIBLE);
             }
         });
 
     }
     private  void  connectToAPI(String cityname)
     {
-        String API_Link = "http://openweathermap.org/data/2.5/weather?q="+cityname+"&appid=439d4b804bc8187953eb36d2a8c26a02";
+        String API_Link = "https://openweathermap.org/data/2.5/weather?q="+cityname+"&appid=439d4b804bc8187953eb36d2a8c26a02";
 
         RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, API_Link,
@@ -56,8 +57,8 @@ public class API_page extends AppCompatActivity {
                             Double degree = wind.getDouble("deg");
                             // String name;
 
-                            Toast.makeText(API_page.this,"Speed: "+speed+"\t"+"Degree: "+degree,Toast.LENGTH_LONG).show();
-                            //Wind_tv.setText("The Speed of Wind"+"\t"+speed+"The Degree Of Wind "+"\t"+degree);
+                            //Toast.makeText(MainActivity.this,"Speed: "+speed+"\t"+"Degree: "+degree,Toast.LENGTH_LONG).show();
+                            Wind_tv.setText("The Speed of Wind"+"\t"+speed+"The Degree Of Wind "+"\t"+degree);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -71,4 +72,4 @@ public class API_page extends AppCompatActivity {
         });
         queue.add(stringRequest);
     }
-    }
+}
