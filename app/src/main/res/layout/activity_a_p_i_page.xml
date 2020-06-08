@@ -31,7 +31,7 @@
         android:layout_marginTop="350dp"></TextView>
     <Button
         android:id="@+id/wind_btn"
-        android:text="show wind direction"
+        android:text=" show wind direction"
         android:layout_marginTop="132dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

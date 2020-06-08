@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -34,7 +35,7 @@ public class API_page extends AppCompatActivity {
             public void onClick(View v) {
                 String strtxt =city_et.getText().toString();
                 connectToAPI(strtxt);
-                Wind_tv.setVisibility(View.VISIBLE);
+              //  Wind_tv.setVisibility(View.VISIBLE);
             }
         });
 
@@ -55,8 +56,8 @@ public class API_page extends AppCompatActivity {
                             Double degree = wind.getDouble("deg");
                             // String name;
 
-                            //Toast.makeText(MainActivity.this,"Speed: "+speed+"\t"+"Degree: "+degree,Toast.LENGTH_LONG).show();
-                            Wind_tv.setText("The Speed of Wind"+"\t"+speed+"The Degree Of Wind "+"\t"+degree);
+                            Toast.makeText(API_page.this,"Speed: "+speed+"\t"+"Degree: "+degree,Toast.LENGTH_LONG).show();
+                            //Wind_tv.setText("The Speed of Wind"+"\t"+speed+"The Degree Of Wind "+"\t"+degree);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
