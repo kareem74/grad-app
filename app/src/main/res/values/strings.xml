@@ -4,6 +4,7 @@
     <string name="Decision_parameters">Decision Parameters</string>
     <string name="General_setting"> General Setting</string>
     <string name="Normal_Temperature">Normal Temperature</string>
+    <string name="Enter_City_Name">   Enter City Name : </string>
     <string name="notify_on_extreme_values">Notify On Extreme Values</string>
     <string name="CopyRight">"Copyright \u00a92020, Graduation Project"</string>
     <string name="History">History</string>
