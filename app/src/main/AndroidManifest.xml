@@ -11,15 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:replace="icon,theme">
-        <activity android:name=".API_page">
+        <activity android:name=".splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".splash_screen">
-
         </activity>
         <activity android:name=".Register"></activity>
         <activity android:name=".login" />
