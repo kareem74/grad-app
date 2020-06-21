@@ -13,7 +13,7 @@ import android.widget.TextView;
 public class splash_screen extends AppCompatActivity {
     ImageView icon ;
     TextView smart_fish_txt;
-   Animation topAnim , BottomAnim;
+   Animation topAnim , bottomAnim;
 
 
     @Override
@@ -23,9 +23,9 @@ public class splash_screen extends AppCompatActivity {
         icon = findViewById(R.id.icon_splash);
         smart_fish_txt = findViewById(R.id.smart_aqua_txt);
         topAnim = AnimationUtils.loadAnimation(this, R.anim.top_anim);
-        BottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_anim);
+        bottomAnim = AnimationUtils.loadAnimation(this,R.anim.bottom_anim);
         icon.setAnimation(topAnim);
-        smart_fish_txt.setAnimation(BottomAnim);
+        smart_fish_txt.setAnimation(bottomAnim);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
