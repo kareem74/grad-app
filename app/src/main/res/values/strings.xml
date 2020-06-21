@@ -9,6 +9,10 @@
     <string name="CopyRight">"Copyright \u00a92020, Graduation Project"</string>
     <string name="smart_fish_farm"> Smart Fish Farm</string>
     <string name="History">History</string>
+    <string name="caco3_tank"> CaCo3 Tank</string>
+    <string name="Paddle"> Paddle</string>
+    <string name="Heater"> Heater</string>
+    <string name="Food_tank"> Food Tank</string>
     <string name="ph">  PH :          </string>
     <string name="temp">  Temp :          </string>
     <string name="nh3">   NH3 :           </string>
