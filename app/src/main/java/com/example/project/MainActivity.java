@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
@@ -14,6 +16,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
     ImageButton live_btn, setting_btn , history_btn, Logout_btn;
+    Animation Topanim , Bottomanim;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,12 @@ public class MainActivity extends AppCompatActivity {
         setting_btn = findViewById(R.id.setting_icon);
         history_btn = findViewById(R.id.history_icon);
         Logout_btn = findViewById(R.id.logout_icon);
+        Topanim = AnimationUtils.loadAnimation(this, R.anim.top_anim);
+        Bottomanim = AnimationUtils.loadAnimation(this,R.anim.bottom_anim);
+        live_btn.setAnimation(Topanim);
+        history_btn.setAnimation(Topanim);
+        setting_btn.setAnimation(Bottomanim);
+        Logout_btn.setAnimation(Bottomanim);
         live_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

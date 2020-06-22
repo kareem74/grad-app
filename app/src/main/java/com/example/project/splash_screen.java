@@ -29,7 +29,7 @@ public class splash_screen extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent i = new Intent(splash_screen.this, action_page.class);
+                Intent i = new Intent(splash_screen.this, MainActivity.class);
                 startActivity(i);
                 finish();
             }
