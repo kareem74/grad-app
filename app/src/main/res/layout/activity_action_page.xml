@@ -27,6 +27,7 @@
         android:textSize="24dp"
 ></TextView>
     <androidx.appcompat.widget.SwitchCompat
+        android:id="@+id/paddle_switch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textOff="off"
@@ -45,6 +46,7 @@
         android:textSize="24dp"
         android:layout_marginTop="16dp"></TextView>
             <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/heater_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textOff="off"
@@ -64,6 +66,7 @@
         android:textSize="24dp"
         android:layout_marginTop="16dp"></TextView>
             <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/food_tank_switch"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textOff="off"
@@ -82,6 +85,7 @@
         android:textSize="24dp"
         android:layout_marginTop="16dp"></TextView>
         <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/caco_tank_switch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textOff="off"
