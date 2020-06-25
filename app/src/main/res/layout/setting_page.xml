@@ -1,214 +1,111 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
+<LinearLayout android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:background="@drawable/background_g">
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-         android:paddingTop="32dp"
-        android:paddingLeft="16dp">
-       <ImageView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:layout_gravity="center"
-           android:layout_centerHorizontal="true"
-           android:src="@drawable/oranda"></ImageView>
-
-        <TextView
-            android:id="@+id/setting_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="General Settings"
-            android:textSize="24dp"
-            android:layout_marginTop="272dp"
-            android:textColor="#0f4c75"
-            ></TextView>
-        <androidx.appcompat.widget.AppCompatCheckBox
-            android:layout_below="@id/setting_txt"
-            android:id="@+id/notify_checkbox"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="notify on PH extreme values"
-            android:textColor="#687466"
-            android:textSize="16dp"
-            android:buttonTint="#0f4c75"
-            ></androidx.appcompat.widget.AppCompatCheckBox>
-        <TextView
-            android:layout_below="@id/notify_checkbox"
-            android:id="@+id/extreme_value_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Extreme Value"
-            android:textColor="#687466"
-            android:visibility="gone"
-          >
-        </TextView>
-        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-            android:layout_below="@id/extreme_value_txt"
-            android:id="@+id/extreme_btn"
-            android:layout_width="136dp"
-            android:layout_height="24dp"
-       app:backGroundColor="#46B5D1"
-            app:initialNumber="8"
-            app:finalNumber="20"
-            android:visibility="gone"
-            ></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
-
-        <TextView
-            android:layout_below="@id/extreme_btn"
-            android:id="@+id/measure_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Measuring Period"
-            android:textColor="#687466"
-            android:visibility="gone"
-            ></TextView>
-        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-            android:layout_below="@id/measure_txt"
-            android:id="@+id/measure_btn"
-            android:layout_width="136dp"
-            android:layout_height="24dp"
-            app:backGroundColor="#46B5D1"
-            app:initialNumber="8"
-            app:finalNumber="20"
-            android:visibility="gone"
-            ></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
-        <TextView
-            android:layout_below="@id/measure_txt"
-            android:layout_toRightOf="@id/measure_btn"
-            android:layout_marginLeft="3dp"
-            android:id="@+id/minute_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="minute"
-            android:textColor="#687466"
-            android:visibility="gone"
-            ></TextView>
-
-        <TextView
-            android:layout_below="@id/measure_btn"
-            android:id="@+id/decision_txt"
-            android:layout_marginTop="8dp"
-            android:text="Decision Parameters"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="24dp"
-            android:textColor="#0f4c75"
-            ></TextView>
-        <TextView
-            android:id="@+id/normalPH_txt"
-            android:layout_below="@id/decision_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Normal PH range:"
-            android:textColor="#687466"
-            android:textSize="16dp"
-            android:layout_marginBottom="8dp"
-            ></TextView>
-
-        <TextView
-            android:id="@+id/minPH_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/normalPH_txt"
-            android:text="Min "
-            android:textColor="#687466"></TextView>
-        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-            android:id="@+id/minPH_btn"
-            android:layout_below="@id/normalPH_txt"
-            android:layout_toRightOf="@id/minPH_txt"
-            android:layout_width="104dp"
-            android:layout_height="24dp"
-            app:backGroundColor="#46B5D1"
-            ></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
-        <TextView
-            android:id="@+id/maxPH_txt"
-            android:layout_below="@id/normalPH_txt"
-            android:layout_toRightOf="@id/minPH_btn"
-            android:layout_marginLeft="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Max "
-            android:textColor="#687466"
-            ></TextView>
-        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-            android:layout_below="@id/normalPH_txt"
-            android:layout_toRightOf="@id/maxPH_txt"
-            app:backGroundColor="#46B5D1"
-            android:id="@+id/maxPH_btn"
-     android:layout_width="104dp"
-            android:layout_height="24dp"></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
-        <TextView
-            android:layout_below="@id/minPH_txt"
-            android:id="@+id/notmalTemp_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Normal Temperature:"
-            android:textSize="16dp"
-            android:textColor="#687466"
-            android:layout_marginTop="8dp"
-            android:layout_marginBottom="8dp"
-            ></TextView>
-        <TextView
-            android:layout_below="@id/notmalTemp_txt"
-            android:id="@+id/minTemp_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Min "
-            android:textColor="#687466"
-            ></TextView>
-        <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-            android:layout_below="@id/notmalTemp_txt"
-            android:layout_toRightOf="@id/minTemp_txt"
-            android:id="@+id/minTemp_btn"
-            android:layout_width="104dp"
-            android:layout_height="24dp"
-            app:backGroundColor="#46B5D1"
-            ></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
-        <TextView
-            android:id="@+id/c_min_txt"
-            android:layout_below="@id/notmalTemp_txt"
-            android:layout_toRightOf="@id/minTemp_btn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="C"
-            android:textSize="16dp"
-            android:textColor="#687466"
-            ></TextView>
-        <TextView
-            android:layout_below="@id/notmalTemp_txt"
-            android:layout_toRightOf="@id/c_min_txt"
-android:layout_marginLeft="32dp"
-            android:id="@+id/maxTemp_txt"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Max "
-            android:textColor="#687466"
-            ></TextView>
-      <com.cepheuen.elegantnumberbutton.view.ElegantNumberButton
-          android:layout_below="@id/notmalTemp_txt"
-          android:layout_toRightOf="@id/maxTemp_txt"
-          android:id="@+id/maxTemp_btn"
-          android:layout_width="104dp"
-          android:layout_height="24dp"
-          app:backGroundColor="#46B5D1"
-          ></com.cepheuen.elegantnumberbutton.view.ElegantNumberButton>
+    android:orientation="vertical"
+    android:background="@drawable/background_g"
+    android:padding="24dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+ <ImageView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:src="@drawable/oranda"
+     android:layout_gravity="center"></ImageView>
+ <TableLayout
+     android:padding="40dp"
+     android:layout_width="match_parent"
+     android:layout_height="wrap_content"
+     android:layout_marginVertical="48dp"
+     android:layout_marginHorizontal="10dp"
+     >
+  <TableRow android:paddingBottom="8dp"
+      android:paddingTop="8dp"            >
    <TextView
-       android:id="@+id/c_max_txt"
-       android:layout_below="@id/notmalTemp_txt"
-       android:layout_toRightOf="@id/maxTemp_btn"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
-       android:text="C"
-       android:textSize="16dp"
-       android:textColor="#687466"
+       android:textColor="@color/gray_light"
+       android:text="@string/Paddle"
+       android:textSize="24dp"
        ></TextView>
-    </RelativeLayout>
+   <androidx.appcompat.widget.SwitchCompat
+       android:id="@+id/paddle_switch"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textOff="off"
+       android:textOn="on"
+       app:showText="true"
+       android:textColor="@color/gray"
+       android:thumb="@drawable/thumb1"
+       app:track="@drawable/track1"/>
+  </TableRow>
+  <TableRow android:paddingBottom="8dp" >
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/gray_light"
+       android:text="@string/Heater"
+       android:textSize="24dp"
+       android:layout_marginTop="16dp"></TextView>
+   <androidx.appcompat.widget.SwitchCompat
+       android:id="@+id/heater_switch"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textOff="off"
+       android:textOn="on"
+       app:showText="true"
+       android:layout_marginLeft="64dp"
+       android:textColor="@color/gray"
+       android:thumb="@drawable/thumb1"
+       app:track="@drawable/track1"/>
+  </TableRow>
+  <TableRow android:paddingBottom="8dp" >
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textColor="@color/gray_light"
+       android:text="@string/Food_tank"
+       android:textSize="24dp"
+       android:layout_marginTop="16dp"></TextView>
+   <androidx.appcompat.widget.SwitchCompat
+       android:id="@+id/food_tank_switch"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:textOff="off"
+       android:textOn="on"
+       app:showText="true"
+       android:textColor="@color/gray"
+       android:thumb="@drawable/thumb1"
+       app:track="@drawable/track1"/>
+  </TableRow><TableRow android:paddingBottom="8dp" >
 
-</ScrollView>
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textColor="@color/gray_light"
+      android:text="@string/caco3_tank"
+      android:textSize="24dp"
+      android:layout_marginTop="16dp"></TextView>
+  <androidx.appcompat.widget.SwitchCompat
+      android:id="@+id/caco_tank_switch"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:textOff="off"
+      android:textOn="on"
+      app:showText="true"
 
-
+      android:textColor="@color/gray"
+      android:thumb="@drawable/thumb1"
+      app:track="@drawable/track1"/>
+ </TableRow>
+ </TableLayout>
+ <TextView
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:textColor="@color/white"
+     android:text="@string/CopyRight"
+     android:layout_gravity="center"
+     android:layout_marginBottom="0dp"
+     android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+     android:gravity="center"></TextView>
+</LinearLayout>
 
