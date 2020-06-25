@@ -54,7 +54,7 @@ public class Live_view_page extends AppCompatActivity {
                         String TEMP = dataSnapshot.child("Tempreture").getValue().toString();
                         TEMP_connection.setText("Temp value is " + TEMP);
                         String NH3 = dataSnapshot.child("nh3").getValue().toString();
-                        TEMP_connection.setText("nh3 value is " + NH3);
+                        TEMP_connection.setText("nh3 value iss " + NH3);
 
 
 
