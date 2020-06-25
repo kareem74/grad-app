@@ -32,10 +32,11 @@
                 android:textSize="20dp"
                 android:textColor="@color/gray_light"
                 />
-            <TextView android:layout_width="match_parent"
+            <EditText android:layout_width="match_parent"
                 android:id="@+id/phe"
                 android:layout_height="48dp"
                 android:layout_weight="1"
+                android:textColor="#000000"
                 android:background="@drawable/round_edit_txt_live_page"
                 android:drawableLeft="@drawable/ic_flask"
                 />
@@ -51,11 +52,12 @@
                 android:textColor="@color/gray_light"
                 />
 
-            <TextView
+            <EditText
                 android:id="@+id/tempe"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"
+                android:textColor="#000000"
                 android:background="@drawable/round_edit_txt_live_page"
                 android:drawableLeft="@drawable/ic_dna" />
 
@@ -78,11 +80,15 @@
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
                 android:layout_weight="1"
+                android:textColor="#000000"
                 android:background="@drawable/round_edit_txt_live_page"
                 android:drawableLeft="@drawable/ic_test_tube"
 
                 />
+
+
         </TableRow>
+
     </TableLayout>
     <Button
         android:layout_width="wrap_content"

@@ -27,17 +27,20 @@ import java.lang.ref.PhantomReference;
 
 public class Live_view_page extends AppCompatActivity {
 
+    FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    TextView PH_connection, TEMP_connection, NH3_connection;
+
+    EditText PH_connection,TEMP_connection,NH3_connection;
     Button show;
+    int id=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_view_page);
-        PH_connection = findViewById(R.id.phe);
-        TEMP_connection = findViewById(R.id.tempe);
-        NH3_connection = findViewById(R.id.ammoniae);
+        PH_connection = (EditText) findViewById(R.id.phe);
+        TEMP_connection = (EditText) findViewById(R.id.tempe);
+
         show = findViewById(R.id.show);
 
         show.setOnClickListener(new View.OnClickListener() {
@@ -45,16 +48,16 @@ public class Live_view_page extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                databaseReference =FirebaseDatabase.getInstance().getReference().child("sensors");
+                databaseReference =FirebaseDatabase.getInstance().getReference("sensors");
                 databaseReference.addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String PH = dataSnapshot.child("PH").getValue().toString();
-                        PH_connection.setText("ph value is " + PH);
-                        String TEMP = dataSnapshot.child("Tempreture").getValue().toString();
-                        TEMP_connection.setText("Temp value is " + TEMP);
-                        String NH3 = dataSnapshot.child("nh3").getValue().toString();
-                        TEMP_connection.setText("nh3 value iss " + NH3);
+
+                            String PH = dataSnapshot.child("PH").getValue().toString();
+
+                            PH_connection.setText("the value of ph is :" + PH);
+                            String Temp = dataSnapshot.child("Temp").getValue().toString();
+                            TEMP_connection.setText("the value of temperutre is " + Temp);
 
 
 
@@ -67,12 +70,13 @@ public class Live_view_page extends AppCompatActivity {
                 });
 
             }
-        });
+        });/*
 
-        /*databaseReference.addChildEventListener(new ChildEventListener() {
+        databaseReference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                String phhh =PH_connection.getText().toString();
+                String phhh =dataSnapshot.child("PH").getValue().toString();
+
                 if (phhh.isEmpty()){
                     Toast.makeText(getApplicationContext(),"wait ",Toast.LENGTH_LONG).show();
                 }else {
@@ -105,7 +109,7 @@ public class Live_view_page extends AppCompatActivity {
 
         }
     private void notification_PH () {
-        String PHH = PH_connection.getText().toString();
+        String PHH = dataSnapshot.child("PH").getValue().toString();
 
         String message = "the value of ph is ";
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
