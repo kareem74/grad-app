@@ -32,7 +32,7 @@
                 android:textSize="20dp"
                 android:textColor="@color/gray_light"
                 />
-            <EditText android:layout_width="match_parent"
+            <TextView android:layout_width="match_parent"
                 android:id="@+id/phe"
                 android:layout_height="48dp"
                 android:layout_weight="1"
@@ -51,7 +51,7 @@
                 android:textColor="@color/gray_light"
                 />
 
-            <EditText
+            <TextView
                 android:id="@+id/tempe"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -73,7 +73,7 @@
                 android:textColor="@color/gray_light"
                 />
 
-            <EditText
+            <TextView
                 android:id="@+id/ammoniae"
                 android:layout_width="match_parent"
                 android:layout_height="40dp"
@@ -84,6 +84,13 @@
                 />
         </TableRow>
     </TableLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show"
+        android:id="@+id/show"
+        android:layout_gravity="center"
+        android:background="#5d6d7e"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
