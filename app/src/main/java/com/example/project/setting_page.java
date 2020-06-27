@@ -76,7 +76,7 @@ public class setting_page extends AppCompatActivity {
                 }
                 else{
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myRef = database.getReference("heater_status");
+                    DatabaseReference myRef = database.getReference("Heater_status");
                     myRef.setValue(0);
 
                     SharedPreferences.Editor editor = getSharedPreferences("save",MODE_PRIVATE).edit();
