@@ -54,15 +54,16 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
             if (key.equals("ph_status"))
             {
                 String PH = snapshot.getValue(String.class);
+                double D=Double.parseDouble(PH);
                 ph_read_txt.setText(PH);
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(Live_view_page.this);
                 builder.setSmallIcon(R.drawable.notification);
                 builder.setContentTitle("New notification");
-                builder.setContentText("Current PH Value : "+PH)
+                builder.setContentText("Current PH Value : "+D)
                         .setAutoCancel(true);
                 Intent ph_intent = new Intent(Live_view_page.this,setting_page.class);
                 ph_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                ph_intent.putExtra("PH value :",PH);
+                ph_intent.putExtra("PH value :",D);
                 PendingIntent pendingIntent =   PendingIntent.getActivity(Live_view_page.this,0,ph_intent,PendingIntent.FLAG_UPDATE_CURRENT);
                 builder.setContentIntent(pendingIntent);
                 NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
@@ -75,15 +76,16 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
             if (key.equals("temp_status"))
             {
                 String Temp = snapshot.getValue(String.class);
+                double D_temp=Double.parseDouble(Temp);
                 temp_read_txt.setText(Temp);
                 NotificationCompat.Builder builder = new NotificationCompat.Builder(Live_view_page.this)
                 .setSmallIcon(R.drawable.notification)
                 .setContentTitle("New notification")
-                .setContentText("Current Temp Value : "+ Temp)
+                .setContentText("Current Temp Value : "+ D_temp)
                         .setAutoCancel(true);
                 Intent Temp_intent = new Intent(Live_view_page.this,setting_page.class);
                 Temp_intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                Temp_intent.putExtra("Temp value :",Temp);
+                Temp_intent.putExtra("Temp value :",D_temp);
                 PendingIntent pendingIntent =   PendingIntent.getActivity(Live_view_page.this,0,Temp_intent,PendingIntent.FLAG_UPDATE_CURRENT);
                 builder.setContentIntent(pendingIntent);
                 NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
