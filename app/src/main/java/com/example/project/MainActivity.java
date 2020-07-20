@@ -47,14 +47,13 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        weather_btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,API_page.class);
-                startActivity(intent);
-            }
-        });
 
+    weather_btn.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(MainActivity.this, API_page.class);
+        }
+    });
 
         Logout_btn.setOnClickListener(new View.OnClickListener() {
             @Override
