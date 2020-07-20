@@ -17,7 +17,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_marginTop="80dp"
         android:background="@drawable/round_eidttxt"
         app:errorEnabled="true">
         <EditText
@@ -25,6 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint=" E-mail"
+            android:fontFamily="sans-serif-condensed-medium"
             android:textColorHint="@color/gray_light"
             android:textColor="@color/gray"
             android:drawableLeft="@drawable/email"
@@ -46,6 +47,7 @@
             android:textColorHint="@color/gray_light"
             android:textColor="@color/gray"
             android:hint=" Username"
+            android:fontFamily="sans-serif-condensed-medium"
             android:drawableLeft="@drawable/username"
             android:inputType="text" />
 
@@ -64,6 +66,7 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/lock"
             android:hint="@string/password"
+            android:fontFamily="sans-serif-condensed-medium"
             android:textColorHint="@color/gray_light"
             android:textColor="@color/gray"
             android:inputType="textPassword" />
@@ -86,6 +89,7 @@
             android:inputType="number|phone"
             android:maxLength="11"
             android:textColor="@color/gray"
+            android:fontFamily="sans-serif-condensed-medium"
             android:textColorHint="@color/gray_light" />
 
     </LinearLayout>
@@ -97,6 +101,7 @@
         android:onClick="RegisterInput"
         android:layout_gravity="center"
         android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:background="@drawable/round_btn"
         android:textColor="@color/batihki"
         android:text="@string/Register"
@@ -108,6 +113,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center_horizontal"
         android:layout_gravity="center_horizontal"
         android:textColor="@color/batihki"

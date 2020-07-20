@@ -20,6 +20,16 @@
         android:textColor="@color/blue_color"
         android:layout_gravity="center"
         android:gravity="center"
-        android:fontFamily="sans-serif-smallcaps"
+        android:fontFamily="sans-serif-condensed-medium"
         android:textSize="48dp"></TextView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/gray"
+        android:text="@string/CopyRight"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
+        android:gravity="center"></TextView>
 </LinearLayout>

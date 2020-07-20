@@ -28,6 +28,7 @@
          android:textColorHint="@color/gray_light"
         android:textColor="@color/gray"
         android:drawableLeft="@drawable/email"
+        android:fontFamily="sans-serif-condensed-medium"
         android:inputType="textEmailAddress" />
     </LinearLayout>
 
@@ -45,6 +46,7 @@
             android:layout_height="wrap_content"
             android:drawableStart="@drawable/lock"
             android:hint="@string/password"
+            android:fontFamily="sans-serif-condensed-medium"
             android:textColorHint="@color/gray_light"
             android:textColor="@color/gray"
             android:inputType="textPassword" />
@@ -59,6 +61,7 @@
         android:layout_marginTop="40dp"
         android:background="@drawable/round_btn"
         android:textColor="@color/batihki"
+        android:fontFamily="sans-serif-condensed-medium"
         android:text="Login" />
     <TextView
         android:id="@+id/register_textview"
@@ -68,6 +71,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:gravity="center_horizontal"
+        android:fontFamily="sans-serif-condensed-medium"
         android:layout_gravity="center_horizontal"
        android:textColor="@color/batihki"
         android:textSize="20dp"></TextView>
@@ -86,6 +90,7 @@
         android:text="@string/CopyRight"
         android:layout_gravity="center"
         android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-condensed-medium"
         android:textAppearance="@style/TextAppearance.AppCompat.Small.Inverse"
         android:gravity="center"></TextView>
 

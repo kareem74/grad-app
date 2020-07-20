@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity"
+    android:padding="16dp"
     android:background="@drawable/background_g"
     >
     <ImageView
@@ -27,9 +28,11 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/pht"
                 android:text="@string/ph"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="20dp"
+
                 android:textColor="@color/gray_light"
                 />
             <EditText android:layout_width="match_parent"
@@ -37,6 +40,7 @@
                 android:layout_height="48dp"
                 android:layout_weight="1"
                 android:textColor="#000000"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:background="@drawable/round_edit_txt_live_page"
                 android:drawableLeft="@drawable/ic_flask"
                 />
@@ -49,16 +53,18 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:textColor="@color/gray_light"
                 />
 
             <EditText
                 android:id="@+id/temp_read_txt"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="48dp"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:background="@drawable/round_edit_txt_live_page"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:drawableLeft="@drawable/ic_dna" />
 
 
@@ -72,18 +78,19 @@
                 android:layout_gravity="center"
                 android:textStyle="bold"
                 android:textSize="20dp"
+                android:fontFamily="sans-serif-condensed-medium"
                 android:textColor="@color/gray_light"
                 />
 
             <EditText
                 android:id="@+id/ammonia_read_txt"
                 android:layout_width="match_parent"
-                android:layout_height="40dp"
+                android:layout_height="47dp"
                 android:layout_weight="1"
                 android:textColor="#000000"
                 android:background="@drawable/round_edit_txt_live_page"
                 android:drawableLeft="@drawable/ic_test_tube"
-
+                android:fontFamily="sans-serif-condensed-medium"
                 />
 
 
@@ -96,6 +103,7 @@
         android:text="Show"
         android:id="@+id/show"
         android:layout_gravity="center"
+        android:textColor="@color/light_color"
         android:background="@drawable/round_btn"/>
 
     <TextView

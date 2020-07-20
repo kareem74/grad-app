@@ -45,12 +45,12 @@
            >
 
             <ImageButton
-                android:id="@+id/history_icon"
+                android:id="@+id/weather_icon"
                 android:layout_width="141dp"
                 android:layout_height="198dp"
                 android:layout_centerInParent="true"
                 android:background="@color/labani"
-                android:src="@drawable/history"></ImageButton>
+                android:src="@drawable/wea"></ImageButton>
 
         </RelativeLayout>
 
