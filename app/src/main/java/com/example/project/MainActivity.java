@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             Intent intent = new Intent(MainActivity.this, API_page.class);
+            startActivity(intent);
         }
     });
 
