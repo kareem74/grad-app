@@ -25,7 +25,7 @@ public class API_page extends AppCompatActivity {
     EditText city_et;
     int humidity ,pressure;
     String description;
-    double speed , degree;
+    double Speed , degree;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +58,7 @@ public class API_page extends AppCompatActivity {
                             wind = root.getJSONObject("wind");
                             main = root.getJSONObject("main");
                             weather = root.getJSONObject("weather");
-                             speed = wind.getDouble("speed");
+                             Speed = wind.getDouble("speed");
                             degree = wind.getDouble("deg");
                             pressure = main.getInt("pressure");
                             humidity = main.getInt("humidity");
@@ -67,7 +67,7 @@ public class API_page extends AppCompatActivity {
                             // String name;
                             Log.i("weather","hey hello");
                             //Toast.makeText(MainActivity.this,"Speed: "+speed+"\t"+"Degree: "+degree,Toast.LENGTH_LONG).show();
-                            Wind_tv.setText("The Speed of Wind : "+speed+"\t"+"The Degree Of Wind : "+degree +"\t"+"Pressure :" +pressure+"\t"+"Humidity :"+humidity+"\t"+"Description : "+description);
+                            Wind_tv.setText("The Speed of Wind : "+Speed+"\t"+"The Degree Of Wind : "+degree +"\t"+"Pressure :" +pressure+"\t"+"Humidity :"+humidity+"\t"+"Description : "+description);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
