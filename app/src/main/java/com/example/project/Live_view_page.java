@@ -30,10 +30,10 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
-    private NotificationManagerCompat notificationManagerCompat;
+
 
     EditText PH_connection,TEMP_connection,NH3_connection;
-    Button show;
+    Button show,okay;
     int id=0;
 
     @Override
@@ -62,20 +62,9 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
                         String Temp = dataSnapshot.child("Temp").getValue().toString();
                         TEMP_connection.setText(Temp);
 
-/*                        if (PH.contentEquals( null)){
-                            Toast.makeText(Live_view_page.this, "nothing to show ", Toast.LENGTH_LONG).show();
-
-                        }
-                        else {
-                            Notification notification = new NotificationCompat.Builder(Live_view_page.this,NotificationApp.CHANNEL_1_ID)
-                                    .setContentTitle("extreme value alert")    //put the title
-                                    .setContentText("action recommended").build(); //the text of the notification
-                            notificationManagerCompat.notify(1,notification);
-
-                        }*/
-
 
                     }
+
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
