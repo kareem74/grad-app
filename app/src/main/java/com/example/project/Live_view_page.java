@@ -72,10 +72,10 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
                         PH_connection.setText(PH);
                         String Temp = dataSnapshot.child("Temp").getValue().toString();
                         TEMP_connection.setText(Temp);
-                        NH3_VALUE =Double.parseDouble(PH +Temp)*0.0007;
-                       NH3_connection.setText((int) NH3_VALUE);
 
                     }
+                   // NH3_VALUE =Double.parseDouble(PH +Temp)*0.0007;
+                      // NH3_connection.setText((int) NH3_VALUE);
 
 
                     @Override
