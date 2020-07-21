@@ -26,6 +26,7 @@ public class SliderAdapter extends PagerAdapter {
             {
                     R.drawable.paddle_pic,
                     R.drawable.paddle_pic,
+                    R.drawable.food_pic,
                     R.drawable.ph_pic
 
             };
@@ -33,6 +34,7 @@ public class SliderAdapter extends PagerAdapter {
             {
                     "Paddle",
                     "Heater",
+                    "Food",
                     "CaCo3"
             };
     public  String[] slide_decs =
