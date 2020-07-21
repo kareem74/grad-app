@@ -38,7 +38,7 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
     FloatingActionButton fabmain;
     Float TranslationY = 100f;
     boolean isMenuOpen = false;
-    String NH3_VALUE;
+    Double NH3_VALUE;
     OvershootInterpolator interpolator;
 
     EditText PH_connection,TEMP_connection,NH3_connection;
@@ -73,12 +73,9 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
                         PH_connection.setText(PH);
                          Temp = dataSnapshot.child("Temp").getValue().toString();
                         TEMP_connection.setText(Temp);
-                        double DPH = Double.parseDouble(PH);
-                        double DTEMP = Double.parseDouble(Temp);
-                        NH3_VALUE =(Temp+PH);
-
-                        NH3_connection.setText( NH3_VALUE);
-
+                        NH3_VALUE = Double.parseDouble(PH + Temp);
+                        double value = NH3_VALUE*0.0007;
+                        NH3_connection.setText((int) value);
                     }
                    // NH3_VALUE =Double.parseDouble(PH +Temp)*0.0007;
                       // NH3_connection.setText((int) NH3_VALUE);
