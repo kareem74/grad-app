@@ -4,37 +4,42 @@
     android:background="#ffffff"
     android:padding="16dp"
     xmlns:android="http://schemas.android.com/apk/res/android" >
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    </androidx.viewpager.widget.ViewPager>
-    <LinearLayout
-        android:id="@+id/dotsLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_alignBottom="@+id/viewpager">
+        android:layout_width="392dp"
+        android:layout_height="643dp"></androidx.viewpager.widget.ViewPager>
+
 
         <Button
             android:id="@+id/prevbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="8dp"
+            android:layout_marginTop="660dp"
             android:textColor="@color/blue_color"
             android:fontFamily="sans-serif-condensed-medium"
             android:text="@string/previous"
-            android:visibility="invisible"
             android:background="@android:color/transparent"></Button>
 
         <Button
             android:id="@+id/nextbtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="220dp"
+            android:layout_marginLeft="280dp"
+            android:layout_marginTop="660dp"
             android:textColor="@color/blue_color"
             android:text="@string/next"
             android:fontFamily="sans-serif-condensed-medium"
             android:background="@android:color/transparent"></Button>
-    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/dotsLayout"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="660dp"
+        android:gravity="center"
+        android:orientation="horizontal"></LinearLayout>
+
 </RelativeLayout>
