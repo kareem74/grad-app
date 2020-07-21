@@ -44,6 +44,7 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
     EditText PH_connection,TEMP_connection,NH3_connection;
     Button show,okay;
     int id=0;
+    String PH ,Temp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,11 +67,11 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                        String PH = dataSnapshot.child("PH").getValue().toString();
+                        PH = dataSnapshot.child("PH").getValue().toString();
 
 
                         PH_connection.setText(PH);
-                        String Temp = dataSnapshot.child("Temp").getValue().toString();
+                         Temp = dataSnapshot.child("Temp").getValue().toString();
                         TEMP_connection.setText(Temp);
 
                     }
@@ -83,6 +84,8 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
 
                     }
                 });
+                NH3_VALUE = (Double.parseDouble(PH + Temp)*0.0007);
+                NH3_connection.setText((int) NH3_VALUE);
             }
         });
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
