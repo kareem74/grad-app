@@ -12,10 +12,7 @@
         tools:replace="icon,theme"
         >
         <activity android:name=".slideshow">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
         </activity>
         <activity android:name=".API_page" >
 
