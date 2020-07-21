@@ -24,7 +24,7 @@ public class API_page extends AppCompatActivity {
     EditText city_et;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) throws NullPointerException {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         Wind_btn = findViewById(R.id.wind_btn);
