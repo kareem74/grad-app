@@ -129,12 +129,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:fabSize="normal"
-
         android:layout_toRightOf="@+id/show"
         android:src="@drawable/help"
         android:layout_marginLeft="186dp"
-
-
 
         />
     </RelativeLayout>
