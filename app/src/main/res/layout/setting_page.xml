@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@drawable/background_g"
-    android:padding="24dp"
+    android:padding="16dp"
     xmlns:android="http://schemas.android.com/apk/res/android">
  <ImageView
      android:layout_width="wrap_content"
@@ -27,6 +27,7 @@
        android:text="@string/Paddle"
        android:fontFamily="sans-serif-condensed-medium"
        android:textSize="24dp"
+
        ></TextView>
    <androidx.appcompat.widget.SwitchCompat
        android:id="@+id/paddle_switch"
@@ -37,7 +38,9 @@
        app:showText="true"
        android:textColor="@color/gray"
        android:thumb="@drawable/thumb1"
-       app:track="@drawable/track1"/>
+       app:track="@drawable/track1"
+
+       />
   </TableRow>
   <TableRow android:paddingBottom="8dp" >
    <TextView
@@ -58,7 +61,9 @@
        android:layout_marginLeft="64dp"
        android:textColor="@color/gray"
        android:thumb="@drawable/thumb1"
-       app:track="@drawable/track1"/>
+       app:track="@drawable/track1"
+       android:layout_marginTop="16dp"
+       />
   </TableRow>
   <TableRow android:paddingBottom="8dp" >
    <TextView
@@ -78,7 +83,9 @@
        app:showText="true"
        android:textColor="@color/gray"
        android:thumb="@drawable/thumb1"
-       app:track="@drawable/track1"/>
+       app:track="@drawable/track1"
+       android:layout_marginTop="16dp"
+       />
   </TableRow><TableRow android:paddingBottom="8dp" >
 
   <TextView
@@ -99,7 +106,9 @@
 
       android:textColor="@color/gray"
       android:thumb="@drawable/thumb1"
-      app:track="@drawable/track1"/>
+      app:track="@drawable/track1"
+      android:layout_marginTop="16dp"
+      />
  </TableRow>
  </TableLayout>
 

@@ -18,16 +18,18 @@
         <activity android:name=".splash_screen">
 
         </activity>
-        <activity android:name=".Register" />
+        <activity android:name=".Register" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".login" />
         <activity android:name=".history_page" />
         <activity android:name=".setting_page" />
         <activity android:name=".Live_view_page" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
     </application>
