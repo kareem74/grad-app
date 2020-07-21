@@ -11,7 +11,7 @@
         android:layout_height="256dp"
         android:layout_marginTop="150dp"
         android:layout_marginBottom="144dp"
-        android:src="@drawable/livemonitor"></ImageView>
+        android:src="@drawable/paddle_pic"></ImageView>
 
     <TextView
         android:id="@+id/slide_heading"
@@ -20,7 +20,7 @@
         android:layout_marginTop="400dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="@string/LiveMonitor"
+        android:text="@string/Paddle"
         android:textColor="@color/labani"
         android:textSize="32dp"></TextView>
 
@@ -31,7 +31,7 @@
         android:layout_marginTop="460dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="This Page Help You to Know  The Values of Parameters Which Affect in The Quality of Water in The Farm... "
-        android:textColor="@color/gray"
+        android:text=" This Page Help You to Know  The Values of Parameters Which Affect in The Quality of Water in The Farm..."
+        android:textColor="@color/transparent_white"
         android:textSize="24dp"></TextView>
 </RelativeLayout>

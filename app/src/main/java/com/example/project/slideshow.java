@@ -51,12 +51,12 @@ public class slideshow extends AppCompatActivity {
             nDots[i] = new TextView(this);
             nDots[i].setText(Html.fromHtml("&#8226;"));
             nDots[i].setTextSize(35);
-            nDots[i].setTextColor(getResources().getColor(R.color.blue_color));
+            nDots[i].setTextColor(getResources().getColor(R.color.transparent_white));
             nDotLinear.addView(nDots[i]);
         }
         if(nDots.length>0)
         {
-            nDots[position].setTextColor(getResources().getColor(R.color.blue_color));
+            nDots[position].setTextColor(getResources().getColor(R.color.transparent_white));
         }
     }
 

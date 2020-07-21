@@ -10,6 +10,7 @@
     <color name="labani">#4fd2db</color>
     <color name="gray_light">#d1e3e3</color>
     <color name="mostarda">#ffd15b</color>
+    <color name="transparent_white">#cccccc</color>
     <color name="gray">#b4d4d3</color>
     <color name="batihki">#f17075</color>
 </resources>
