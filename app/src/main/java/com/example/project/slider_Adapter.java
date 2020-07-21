@@ -52,7 +52,7 @@ public class slider_Adapter extends PagerAdapter {
      public  Object instantiateItem (ViewGroup container,int position) throws  NullPointerException
      {
          layoutInflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
-         View view = layoutInflater.inflate(R.layout.slide_show, container,false);
+         View view = layoutInflater.inflate(R.layout.slide_layout, container,false);
          ImageView slideImageView = view.findViewById(R.id.slide_image);
          TextView slideHeading = view.findViewById(R.id.slide_heading);
          TextView slideDescription = view.findViewById(R.id.slide_desc);

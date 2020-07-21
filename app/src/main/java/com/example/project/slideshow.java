@@ -25,7 +25,7 @@ public class slideshow extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_slideshow);
         nDotLinear = findViewById(R.id.dotsLayout);
-        mSlideViewPager = findViewById(R.id.viewpager);
+        mSlideViewPager = (ViewPager)findViewById(R.id.viewpager);
         prevButton = findViewById(R.id.prevbtn);
         nextButton = findViewById(R.id.nextbtn);
         sliderAdapter = new slider_Adapter(this);
