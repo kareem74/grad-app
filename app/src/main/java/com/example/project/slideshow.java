@@ -13,7 +13,7 @@ import androidx.viewpager.widget.ViewPager;
 public class slideshow extends AppCompatActivity {
     private ViewPager mSlideViewPager;
     private LinearLayout nDotLinear;
-    private TextView[] nDots;
+    private TextView[] nDots = new TextView[4];
     private Button prevButton , nextButton;
     private  int CurrentPage;
 
@@ -46,10 +46,9 @@ public class slideshow extends AppCompatActivity {
     }
 
     public void addDotsIndicator(int position) {
-        nDots = new TextView[3];
         for (int i = 0; i < nDots.length; i++) {
             nDots[i] = new TextView(this);
-            nDots[i].setText(Html.fromHtml("&#8226;"));
+            nDots[i].setText(Html.fromHtml("&#8126;"));
             nDots[i].setTextSize(35);
             nDots[i].setTextColor(getResources().getColor(R.color.transparent_white));
             nDotLinear.addView(nDots[i]);
