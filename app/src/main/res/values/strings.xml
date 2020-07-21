@@ -38,5 +38,7 @@
     <string name="registration_success">Registered Successfully</string>
     <string name="registration_Fail">Already Registered..</string>
     <string name="input_error_email_invalid">enter a valid email</string>
+    <string name="previous"> Previous</string>
+    <string name="next"> Next</string>
     <string name="live_monitor_des"> This Page Help You to Know  The Values of Parameters Which Affect in The Quality of Water in The Farm... </string>
 </resources>

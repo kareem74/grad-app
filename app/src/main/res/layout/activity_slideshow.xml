@@ -23,7 +23,7 @@
             android:layout_marginLeft="8dp"
             android:textColor="@color/blue_color"
             android:fontFamily="sans-serif-condensed-medium"
-            android:text="< Previous"
+            android:text="@string/previous"
             android:visibility="invisible"
             android:background="@android:color/transparent"></Button>
 
@@ -33,7 +33,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"
             android:textColor="@color/blue_color"
-            android:text="Next >"
+            android:text="@string/next"
             android:fontFamily="sans-serif-condensed-medium"
             android:background="@android:color/transparent"></Button>
     </LinearLayout>
