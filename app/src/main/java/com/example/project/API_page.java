@@ -1,13 +1,14 @@
 package com.example.project;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CompoundButton;
+
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -41,19 +42,22 @@ public class API_page extends AppCompatActivity {
     }
     private  void  connectToAPI(String CityName)
     {
-        String API_Link = "https://openweathermap.org/data/2.5/weather?q="+CityName+"&appid=439d4b804bc8187953eb36d2a8c26a02";
+        String API_link = "https://samples.openweathermap.org/data/2.5/weather?q="+CityName+"&appid=439d4b804bc8187953eb36d2a8c26a02";
 
         RequestQueue queue = Volley.newRequestQueue(this);
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, API_Link,
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, API_link,
                 new Response.Listener<String>() {
+                    @SuppressLint("SetTextI18n")
                     @Override
                     public void onResponse(String response) {
                         try {
                             JSONObject root = new JSONObject(response);
                             JSONObject wind;
                             wind = root.getJSONObject("wind");
-                            Double speed = wind.getDouble("speed");
-                            Double degree = wind.getDouble("deg");
+                            double speed;
+                            speed = wind.getDouble("speed");
+                            double degree;
+                            degree = wind.getDouble("deg");
                             // String name;
                             Log.i("weather","hey hello");
                             //Toast.makeText(MainActivity.this,"Speed: "+speed+"\t"+"Degree: "+degree,Toast.LENGTH_LONG).show();

@@ -31,7 +31,7 @@
         android:layout_marginTop="460dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text=" This Page Help You to Know  The Values of Parameters Which Affect in The Quality of Water in The Farm..."
+        android:text="Please turn on paddle if the temperature is larger than 25 degrees or ammonia is larger than 0.02./tplease check your farm if ammonia has extreme value."
         android:textColor="@color/transparent_white"
-        android:textSize="24dp"></TextView>
+        android:textSize="18dp"></TextView>
 </RelativeLayout>

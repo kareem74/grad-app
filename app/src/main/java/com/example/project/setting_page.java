@@ -66,7 +66,7 @@ public class setting_page extends AppCompatActivity {
             public void onClick(View view) {
                 if(heater_switch.isChecked()){
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myRef = database.getReference("Heater_status");
+                    DatabaseReference myRef = database.getReference("heater_status");
                     myRef.setValue(1);
 
                     SharedPreferences.Editor editor = getSharedPreferences("save",MODE_PRIVATE).edit();
@@ -142,11 +142,8 @@ public class setting_page extends AppCompatActivity {
                     editor.putBoolean("value",false);
                     editor.apply();
                     caco3_switch.setChecked(false);
-
                 }
             }
         });
-
-
     }
 }
