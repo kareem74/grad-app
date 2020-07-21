@@ -8,6 +8,7 @@ import androidx.core.app.NotificationManagerCompat;
 import androidx.core.app.NotificationCompat;
 import androidx.core.app.NotificationManagerCompat;
 import android.app.Notification;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.renderscript.Sampler;
@@ -33,7 +34,7 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
-    FloatingActionButton fabmain, fabone;
+    FloatingActionButton fabmain;
     Float TranslationY = 100f;
     boolean isMenuOpen = false;
     OvershootInterpolator interpolator;
@@ -142,39 +143,37 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
     */}
     private void initFabMenu() {
         fabmain = findViewById(R.id.fabmain);
-        fabone = findViewById(R.id.fabone);
-        fabone.setAlpha(0f);
+
+
         fabmain.setOnClickListener( this);
-        fabone.setOnClickListener(this);
-        fabone.setTranslationY(TranslationY);
+
     }
 
     private void openMenu() {
         isMenuOpen = !isMenuOpen;
         fabmain.animate().setInterpolator(interpolator).rotation(45f).setDuration(300).start();
-        fabone.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();
 
     }
 
     private void closeMenu() {
         isMenuOpen = !isMenuOpen;
         fabmain.animate().setInterpolator(interpolator).rotation(0f).setDuration(300).start();
-        fabone.animate().translationY(TranslationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
+
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.fabmain:
-                Toast.makeText(this, "hey from fabmin", Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(Live_view_page.this, setting_page.class);
+                startActivity(intent);
                 if (isMenuOpen) {
                     closeMenu();
                 } else {
                     openMenu();
                 }
                 break;
-            case R.id.fabone:
-                break;
+
         }
     }
 
