@@ -8,7 +8,6 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
@@ -23,9 +22,6 @@ public class API_page extends AppCompatActivity {
     Button Wind_btn ;
     TextView Wind_tv;
     EditText city_et;
-    int humidity ,pressure;
-    String description;
-    double Speed , degree;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,9 +39,9 @@ public class API_page extends AppCompatActivity {
         });
 
     }
-    private  void  connectToAPI(String cityname)
+    private  void  connectToAPI(String CityName)
     {
-        String API_Link = "https://samples.openweathermap.org/data/2.5/weather?q="+cityname+"&appid=439d4b804bc8187953eb36d2a8c26a02";
+        String API_Link = "https://openweathermap.org/data/2.5/weather?q="+CityName+"&appid=439d4b804bc8187953eb36d2a8c26a02";
 
         RequestQueue queue = Volley.newRequestQueue(this);
         StringRequest stringRequest = new StringRequest(Request.Method.GET, API_Link,
@@ -54,20 +50,14 @@ public class API_page extends AppCompatActivity {
                     public void onResponse(String response) {
                         try {
                             JSONObject root = new JSONObject(response);
-                            JSONObject wind , main ,weather;
+                            JSONObject wind;
                             wind = root.getJSONObject("wind");
-                            main = root.getJSONObject("main");
-                            weather = root.getJSONObject("weather");
-                             Speed = wind.getDouble("speed");
-                            degree = wind.getDouble("deg");
-                            pressure = main.getInt("pressure");
-                            humidity = main.getInt("humidity");
-                            description = weather.getString("description");
-
+                            Double speed = wind.getDouble("speed");
+                            Double degree = wind.getDouble("deg");
                             // String name;
                             Log.i("weather","hey hello");
                             //Toast.makeText(MainActivity.this,"Speed: "+speed+"\t"+"Degree: "+degree,Toast.LENGTH_LONG).show();
-                            Wind_tv.setText("The Speed of Wind : "+Speed+"\t"+"The Degree Of Wind : "+degree +"\t"+"Pressure :" +pressure+"\t"+"Humidity :"+humidity+"\t"+"Description : "+description);
+                            Wind_tv.setText("The Speed of Wind"+"\t"+speed+"The Degree Of Wind "+"\t"+degree);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
