@@ -33,6 +33,7 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
+    FloatingActionButton floatingActionButton;
 
     FloatingActionButton fabmain;
     Float TranslationY = 100f;
@@ -50,7 +51,7 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
         initFabMenu();
         PH_connection = (EditText) findViewById(R.id.ph__read_txt);
         TEMP_connection = (EditText) findViewById(R.id.temp_read_txt);
-
+        floatingActionButton = findViewById(R.id.fabmain);
         show = findViewById(R.id.show);
 
         show.setOnClickListener(new View.OnClickListener() {
@@ -79,9 +80,15 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
 
                     }
                 });
-
             }
-        });/*
+        });
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Live_view_page.this,slideshow.class);
+            }
+        });
+        /*
 
         databaseReference.addChildEventListener(new ChildEventListener() {
             @Override

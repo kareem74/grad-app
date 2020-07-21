@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="16dp"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/slide_image"
+        android:layout_width="391dp"
+        android:layout_height="256dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginBottom="144dp"
+        android:src="@drawable/livemonitor"></ImageView>
+
+    <TextView
+        android:id="@+id/slide_heading"
+        android:layout_width="381dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="400dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="@string/LiveMonitor"
+        android:textColor="@color/labani"
+        android:textSize="32dp"></TextView>
+
+    <TextView
+        android:id="@+id/slide_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="114dp"
+        android:layout_marginTop="460dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:gravity="center"
+        android:text="@string/live_monitor_des"
+        android:textColor="@color/gray"
+        android:textSize="24dp"></TextView>
+</RelativeLayout>

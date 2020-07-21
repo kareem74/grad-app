@@ -11,7 +11,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar"
         tools:replace="icon,theme">
-        <activity android:name=".API_page"></activity>
+        <activity android:name=".slideshow"></activity>
+        <activity android:name=".API_page" />
         <activity android:name=".splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
