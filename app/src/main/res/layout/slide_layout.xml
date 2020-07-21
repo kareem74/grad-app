@@ -31,7 +31,7 @@
         android:layout_marginTop="460dp"
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center"
-        android:text="@string/live_monitor_des"
+        android:text="This Page Help You to Know  The Values of Parameters Which Affect in The Quality of Water in The Farm... "
         android:textColor="@color/gray"
         android:textSize="24dp"></TextView>
 </RelativeLayout>
