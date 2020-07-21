@@ -46,7 +46,7 @@ public class slideshow extends AppCompatActivity {
     }
 
     public void addDotsIndicator(int position) {
-        nDots = new TextView[3];
+        nDots = new TextView[4];
         for (int i = 0; i < nDots.length; i++) {
             nDots[i] = new TextView(this);
             nDots[i].setText(Html.fromHtml("&#8226;"));

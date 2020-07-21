@@ -26,8 +26,8 @@ public class SliderAdapter extends PagerAdapter {
             {
                     R.drawable.paddle_pic,
                     R.drawable.heater_pic,
-                    R.drawable.food_pic,
-             R.drawable.ph_pic
+                    R.drawable.livemonitor,
+                    R.drawable.wea
 
             };
     public  String[] slide_headings =
