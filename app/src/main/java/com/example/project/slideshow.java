@@ -1,21 +1,19 @@
 package com.example.project;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
 import android.text.Html;
-import android.transition.Slide;
 import android.view.View;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.viewpager.widget.ViewPager;
+
 public class slideshow extends AppCompatActivity {
     private ViewPager mSlideViewPager;
     private LinearLayout nDotLinear;
     private TextView[] nDots;
-    private slider_Adapter sliderAdapter;
     private Button prevButton , nextButton;
     private  int CurrentPage;
 
@@ -28,7 +26,7 @@ public class slideshow extends AppCompatActivity {
         mSlideViewPager = (ViewPager)findViewById(R.id.viewpager);
         prevButton = findViewById(R.id.prevbtn);
         nextButton = findViewById(R.id.nextbtn);
-        sliderAdapter = new slider_Adapter(this);
+        SliderAdapter sliderAdapter = new SliderAdapter(this);
         mSlideViewPager.setAdapter(sliderAdapter);
         addDotsIndicator(0);
         mSlideViewPager.addOnPageChangeListener(viewListener);
@@ -58,8 +56,8 @@ public class slideshow extends AppCompatActivity {
         }
         if(nDots.length>0)
         {
-
-        }nDots[position].setTextColor(getResources().getColor(R.color.blue_color));
+            nDots[position].setTextColor(getResources().getColor(R.color.blue_color));
+        }
     }
 
     ViewPager.OnPageChangeListener viewListener = new ViewPager.OnPageChangeListener() {
@@ -77,7 +75,7 @@ public class slideshow extends AppCompatActivity {
               nextButton.setEnabled(true);
               prevButton.setEnabled(false);
               prevButton.setVisibility(View.INVISIBLE);
-              nextButton.setText("Next >");
+              nextButton.setText(R.string.next);
               prevButton.setText("");
           }
           else if (position== nDots.length -1)
@@ -85,15 +83,15 @@ public class slideshow extends AppCompatActivity {
               nextButton.setEnabled(true);
               prevButton.setEnabled(true);
               prevButton.setVisibility(View.VISIBLE);
-              nextButton.setText("Finish");
-              prevButton.setText("< Previous");
+              nextButton.setText(R.string.finish);
+              prevButton.setText(R.string.previous);
           }
           else {
               nextButton.setEnabled(true);
               prevButton.setEnabled(true);
               prevButton.setVisibility(View.VISIBLE);
-              nextButton.setText("Next >");
-              prevButton.setText("< Previous");
+              nextButton.setText(R.string.next);
+              prevButton.setText(R.string.previous);
           }
         }
 

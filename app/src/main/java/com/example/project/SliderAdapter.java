@@ -8,15 +8,17 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import org.jetbrains.annotations.NotNull;
+
 import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
-public class slider_Adapter extends PagerAdapter {
+public class SliderAdapter extends PagerAdapter {
     Context context;
     LayoutInflater layoutInflater;
    // private Object RelativeLayout;
 
-    public slider_Adapter (Context context)
+    public SliderAdapter (Context context)
     {
         this.context = context;
     }
@@ -47,11 +49,17 @@ public class slider_Adapter extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return false;
+        return view ==(RelativeLayout) object;
     }
-     public  Object instantiateItem (ViewGroup container,int position) throws  NullPointerException
+
+
+
+    @NotNull
+    @Override
+     public  Object instantiateItem (@NonNull ViewGroup container, int position) throws  NullPointerException
      {
-         layoutInflater = (LayoutInflater)context.getSystemService(context.LAYOUT_INFLATER_SERVICE);
+         layoutInflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+         assert layoutInflater != null;
          View view = layoutInflater.inflate(R.layout.slide_layout, container,false);
          ImageView slideImageView = view.findViewById(R.id.slide_image);
          TextView slideHeading = view.findViewById(R.id.slide_heading);
@@ -63,9 +71,10 @@ public class slider_Adapter extends PagerAdapter {
          container.addView(view);
          return  view;
      }
-     @Override
-    public  void destroyItem (ViewGroup container,int position , Object object)
-     {
-         container.removeView((RelativeLayout)object);
-     }
+
+    @Override
+    public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
+
+        container.removeView((RelativeLayout) object);
+    }
 }
