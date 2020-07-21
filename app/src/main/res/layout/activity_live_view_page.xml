@@ -113,17 +113,7 @@
         android:textColor="@color/light_color"
         android:background="@drawable/round_btn"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabone"
-        android:layout_width="14dp"
-        android:layout_height="17dp"
-        android:layout_gravity="center"
-        android:layout_toRightOf="@+id/show"
 
-        android:tint="@android:color/white"
-        app:fabSize="mini"
-        android:layout_marginLeft="186dp"
-        />
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabmain"
         android:layout_width="wrap_content"
