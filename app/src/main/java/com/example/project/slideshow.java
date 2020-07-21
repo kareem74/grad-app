@@ -13,9 +13,12 @@ import androidx.viewpager.widget.ViewPager;
 public class slideshow extends AppCompatActivity {
     private ViewPager mSlideViewPager;
     private LinearLayout nDotLinear;
-    private TextView[] nDots = new TextView[4];
+    public TextView[] nDots = new TextView[4];
+
     private Button prevButton , nextButton;
     private  int CurrentPage;
+
+
 
 
     @Override

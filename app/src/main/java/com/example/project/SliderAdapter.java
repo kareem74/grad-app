@@ -43,6 +43,8 @@ public class SliderAdapter extends PagerAdapter {
                     "This Page Help you to Know Updated of Weather Everyday and All Time , to Inform The Description of Clouds , Humidity , " +
                             "pressure and Wind (Degree and Speed ",
                     "This Page Help You to Make Decision That Make You Have Full Control on Your Farm Remotely , by controlling in Paddle , " +
+                            "Heater , CaCo3 and Food Tank",
+                    "This Page Help You to Make Decision That Make You Have Full Control on Your Farm Remotely , by controlling in Paddle , " +
                             "Heater , CaCo3 and Food Tank"
             };
     @Override
