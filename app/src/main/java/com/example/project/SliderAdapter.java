@@ -25,7 +25,7 @@ public class SliderAdapter extends PagerAdapter {
     public  int[] slide_images=
             {
                     R.drawable.paddle_pic,
-                    R.drawable.paddle_pic,
+                    R.drawable.heater_pic,
                     R.drawable.food_pic,
                     R.drawable.ph_pic
 
