@@ -12,11 +12,13 @@ import android.os.Build;
 import android.os.Bundle;
 import android.renderscript.Sampler;
 import android.view.View;
+import android.view.animation.OvershootInterpolator;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -26,11 +28,15 @@ import com.google.firebase.database.ValueEventListener;
 
 import java.lang.ref.PhantomReference;
 
-public class Live_view_page extends AppCompatActivity  implements ValueEventListener{
+public class Live_view_page extends AppCompatActivity  implements ValueEventListener,View.OnClickListener{
 
     FirebaseDatabase firebaseDatabase;
     DatabaseReference databaseReference;
 
+    FloatingActionButton fabmain, fabone;
+    Float TranslationY = 100f;
+    boolean isMenuOpen = false;
+    OvershootInterpolator interpolator;
 
     EditText PH_connection,TEMP_connection,NH3_connection;
     Button show,okay;
@@ -40,6 +46,7 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_live_view_page);
+        initFabMenu();
         PH_connection = (EditText) findViewById(R.id.ph__read_txt);
         TEMP_connection = (EditText) findViewById(R.id.temp_read_txt);
 
@@ -133,6 +140,43 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
         managerCompat.notify(999, builder.build());
 
     */}
+    private void initFabMenu() {
+        fabmain = findViewById(R.id.fabmain);
+        fabone = findViewById(R.id.fabone);
+        fabone.setAlpha(0f);
+        fabmain.setOnClickListener( this);
+        fabone.setOnClickListener(this);
+        fabone.setTranslationY(TranslationY);
+    }
+
+    private void openMenu() {
+        isMenuOpen = !isMenuOpen;
+        fabmain.animate().setInterpolator(interpolator).rotation(45f).setDuration(300).start();
+        fabone.animate().translationY(0f).alpha(1f).setInterpolator(interpolator).setDuration(300).start();
+
+    }
+
+    private void closeMenu() {
+        isMenuOpen = !isMenuOpen;
+        fabmain.animate().setInterpolator(interpolator).rotation(0f).setDuration(300).start();
+        fabone.animate().translationY(TranslationY).alpha(0f).setInterpolator(interpolator).setDuration(300).start();
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.fabmain:
+                Toast.makeText(this, "hey from fabmin", Toast.LENGTH_LONG).show();
+                if (isMenuOpen) {
+                    closeMenu();
+                } else {
+                    openMenu();
+                }
+                break;
+            case R.id.fabone:
+                break;
+        }
+    }
 
     @Override
     public void onDataChange(@NonNull DataSnapshot snapshot) {
