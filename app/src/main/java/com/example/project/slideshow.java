@@ -1,5 +1,6 @@
 package com.example.project;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.Html;
 import android.view.View;
@@ -87,6 +88,13 @@ public class slideshow extends AppCompatActivity {
               prevButton.setVisibility(View.VISIBLE);
               nextButton.setText(R.string.finish);
               prevButton.setText(R.string.previous);
+              nextButton.setOnClickListener(new View.OnClickListener() {
+                  @Override
+                  public void onClick(View v) {
+                      Intent intent = new Intent(slideshow.this,MainActivity.class);
+                      startActivity(intent);
+                  }
+              });
           }
           else {
               nextButton.setEnabled(true);
