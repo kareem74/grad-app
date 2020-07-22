@@ -92,7 +92,6 @@ public class Live_view_page extends AppCompatActivity  implements ValueEventList
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Live_view_page.this,slideshow.class);
-                startActivity(intent);
             }
         });
         /*

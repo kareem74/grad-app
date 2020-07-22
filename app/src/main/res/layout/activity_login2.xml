@@ -51,8 +51,6 @@
             android:textColor="@color/gray"
             android:inputType="textPassword" />
     </LinearLayout>
-
-
     <Button
         android:layout_width="128dp"
         android:layout_height="wrap_content"

@@ -39,13 +39,13 @@ public class SliderAdapter extends PagerAdapter {
             };
     public  String[] slide_decs =
             {
-                    "This Page Help You to Know  The Values of Parameters Which Affect in The Quality of Water in The Farm... ",
-                    "This Page Help you to Know Updated of Weather Everyday and All Time , to Inform The Description of Clouds , Humidity , " +
-                            "pressure and Wind (Degree and Speed ",
-                    "This Page Help You to Make Decision That Make You Have Full Control on Your Farm Remotely , by controlling in Paddle , " +
-                            "Heater , CaCo3 and Food Tank",
-                    "This Page Help You to Make Decision That Make You Have Full Control on Your Farm Remotely , by controlling in Paddle , " +
-                            "Heater , CaCo3 and Food Tank"
+                    "Please turn on paddle if the temperature is larger than 25 degrees or ammonia is larger than 0.02 ppm.\n" +
+                            "Please check your farm if ammonia has extreme value.  ",
+                    "Please turn on the heater controller if the temperature below 20 degrees.",
+                    "Please open the caco3 tank if the PH value is not normal (7-8).\n" +
+                            "Please check your farm if PH has extreme value.",
+                    "Please open the food tank 6 times in the normal conditions (normal PH-normal temperature).\n" +
+                            "In the abnormal conditions, please open the food tank 3 times."
             };
     @Override
     public int getCount() {
